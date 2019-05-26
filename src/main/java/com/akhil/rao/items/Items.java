@@ -1,5 +1,6 @@
 package com.akhil.rao.items;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -10,10 +11,12 @@ public class Items {
     @Id
     @GeneratedValue
     private int itemId;
+    @Column(unique = true)
     private String itemName;
     private double itemPrice;
-    private String itemType;
+    private ItemType itemType;
     private int itemDiscountPercent;
+    private boolean itemInStock;
 
     public int getItemId() {
         return itemId;
@@ -39,11 +42,11 @@ public class Items {
         this.itemPrice = itemPrice;
     }
 
-    public String getItemType() {
+    public ItemType getItemType() {
         return itemType;
     }
 
-    public void setItemType(String itemType) {
+    public void setItemType(ItemType itemType) {
         this.itemType = itemType;
     }
 
@@ -59,10 +62,11 @@ public class Items {
 
     }
 
-    public Items(String itemName, double itemPrice, String itemType, int itemDiscountPercent) {
+    public Items(String itemName, double itemPrice, ItemType itemType, int itemDiscountPercent,boolean itemInStock) {
         this.itemName = itemName;
         this.itemPrice = itemPrice;
         this.itemType = itemType;
         this.itemDiscountPercent = itemDiscountPercent;
+        this.itemInStock = itemInStock;
     }
 }
