@@ -1,4 +1,4 @@
-package com.akhil.rao.items;
+package com.akhil.rao.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

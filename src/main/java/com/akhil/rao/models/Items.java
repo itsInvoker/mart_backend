@@ -1,4 +1,4 @@
-package com.akhil.rao.items;
+package com.akhil.rao.models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

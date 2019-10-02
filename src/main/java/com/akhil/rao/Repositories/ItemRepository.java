@@ -1,4 +1,4 @@
-package com.akhil.rao.items;
+package com.akhil.rao.Repositories;
 
 import org.springframework.data.repository.CrudRepository;
 
