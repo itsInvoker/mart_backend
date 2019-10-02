@@ -1,5 +1,7 @@
 package com.akhil.rao.models;
 
+import com.akhil.rao.enums.ItemType;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
