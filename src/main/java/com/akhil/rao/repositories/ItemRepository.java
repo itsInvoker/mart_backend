@@ -2,11 +2,13 @@ package com.akhil.rao.repositories;
 
 import com.akhil.rao.enums.ItemType;
 import com.akhil.rao.models.Items;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-public interface ItemRepository extends JpaRepository<Items, List> {
+@Repository
+public interface ItemRepository extends MongoRepository<Items, List> {
     public Items findItemsByItemId(int ItemId);
     public List<Items> findItemsByItemType(ItemType itemType);
 }
