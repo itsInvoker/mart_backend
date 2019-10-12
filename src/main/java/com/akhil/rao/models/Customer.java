@@ -11,6 +11,11 @@ public class Customer {
     @Id
     @GeneratedValue
     private int id;
+    private String name;
+    @Column(unique = true)
+    private String username;
+    private String password;
+    private Date dob;
 
     public int getId() {
         return id;
@@ -51,12 +56,6 @@ public class Customer {
     public void setDob(Date dob) {
         this.dob = dob;
     }
-
-    private String name;
-    @Column(unique = true)
-    private String username;
-    private String password;
-    private Date dob;
 
     public Customer(int id, String name, String username, String password, Date dob) {
         this.id = id;
